@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("font/Unbounded-Regular.woff2") format("woff2"), url("font/Unbounded-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #000;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  .video {
+    max-width: none;
+    max-height: 100%;
+  }
+}
+
+.text {
+  color: #fff;
+  font-size: 4vw;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .text {
+    font-size: 7.8vw;
+  }
+}
+.text__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .text__row--1 {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .text__row--2 .block {
+    order: -1;
+  }
+}
+.text__row_hidden {
+  background-color: #000;
+}
+@media screen and (min-width: 768px) {
+  .text__row_hidden {
+    display: none;
+  }
+}
+.text__row span {
+  color: #fff;
+  display: inline-block;
+  background-color: #000;
+  padding: 15px;
+}
+@media screen and (max-width: 767px) {
+  .text__row span {
+    padding: 5px;
+  }
+}
+.text__row span b {
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  .text__row span b {
+    display: none;
+  }
+}
+.text__row .text__wrap {
+  background-color: #000;
+  padding: 15px;
+}
+@media screen and (max-width: 767px) {
+  .text__row .text__wrap {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+.text__row .text__wrap span {
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .text__row .text__wrap span {
+    padding: 5px;
+  }
+}
+.text__row .block {
+  flex: 1;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .text__row .block_hidden {
+    display: none;
+  }
+}
+.text__row .block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 26%;
+  background-color: #000;
+}
+.text__row .block::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background-color: #000;
+}/*# sourceMappingURL=main.css.map */
